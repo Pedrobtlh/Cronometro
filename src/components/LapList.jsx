@@ -1,10 +1,14 @@
-function LapList() {
+function LapList({ laps }) {
   return (
     <div className="timer-laps">
       <h3>Voltas</h3>
       <ul>
-        <li>Voltas 1: 00:00</li>
-        <li>Voltas 2: 00:00</li>
+        {laps.map((lap, index) => (
+          <li key={index}>
+            {" "}
+            Voltas: {index + 1} : {lap}
+          </li>
+        ))}
       </ul>
     </div>
   );

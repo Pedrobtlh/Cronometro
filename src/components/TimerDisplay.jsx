@@ -1,5 +1,5 @@
-function TimerDisplay() {
-  return <div className="timer-display">00:00</div>;
+function TimerDisplay({ time }) {
+  return <div className="timer-display">{time}</div>;
 }
 
 export default TimerDisplay;
